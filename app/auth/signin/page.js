@@ -5,10 +5,10 @@ import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import AuthLayout from '../../../components/AuthLayout';
+import AuthLayout from '../../components/AuthLayout';
 import Input from '../../components/ui/Input';
-import Button from '../../../components/ui/Button';
-import Select from '../../../components/ui/Select';
+import Button from '../../components/ui/Button';
+import Select from '../../components/ui/Select';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ export default function SignIn() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const router = useRouter();
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
 
   // Redirect if already logged in
   useEffect(() => {

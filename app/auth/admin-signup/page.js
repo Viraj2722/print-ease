@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import AuthLayout from '../../../components/AuthLayout';
-import Input from '../../../components/ui/Input';
-import Button from '../../../components/ui/Button';
+import AuthLayout from '../../components/AuthLayout';
+import Input from '../../components/ui/Input';
+import Button from '../../components/ui/Button';
+import Select from '../../components/ui/Select';
 
 export default function AdminSignUp() {
   const [formData, setFormData] = useState({
