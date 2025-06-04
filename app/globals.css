@@ -3,22 +3,40 @@
 @tailwind utilities;
 
 
-@layer base {
-  body {
-    @apply bg-gray-50 font-sans;
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.4s ease-in-out both;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
-@layer components {
-  .auth-container {
-    @apply min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8;
-  }
-  
-  .auth-card {
-    @apply max-w-md w-full space-y-8 bg-white p-8 rounded-2xl shadow-xl border border-gray-100;
-  }
-  
-  .handwriting {
-    font-family: 'Caveat', cursive;
-  }
+:root {
+  --primary: #5680E9;
+  --primary-light: #84CEEB;
+  --accent: #5AB9EA;
+  --bg: #C1C8E4;
+  --purple: #8B60D0;
+  --text-dark: #1F1F1F;
+  --text-light: #ffffff;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
 }
