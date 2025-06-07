@@ -1,0 +1,8 @@
+name = "printease-worker"
+main = "src/index.js"
+compatibility_date = "2024-06-01"
+
+[[d1_databases]]
+binding = "print-ease"
+database_name = "print-ease" 
+database_id = "e5d91688-a45d-4c18-8ec8-3e5822c6a876"  # Replace this with the actual database ID from the dashboard
